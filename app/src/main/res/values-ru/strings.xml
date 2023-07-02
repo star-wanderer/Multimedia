@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">НМедиа</string>
+    <string name="click_me">Тыц меня!</string>
+    <string name="description_track_control">Старт/Стоп</string>
+    <string name="album">Альбом</string>
+    <string name="artist">Артист</string>
+</resources>

@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "sectionAlbum": "Альбом",
+      "albumName": "Space Oddity",
+      "sectionBand": "Исполнитель:",
+      "bandName": "Linkin Park",
+      "sectionYear": "2017",
+      "sectionCustom": "альтернатива"
+    }
+  ]
+}

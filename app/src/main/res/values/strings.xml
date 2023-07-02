@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NMedia</string>
+    <string name="click_me">Click me</string>
+    <string name="description_track_control">Play/Stop</string>
+    <string name="album">Album</string>
+    <string name="artist">Artist</string>
+</resources>

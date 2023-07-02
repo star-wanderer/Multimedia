@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_padding"
+    tools:context=".ui.AppActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <TextView
+            android:id="@+id/sectionAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album"
+            android:textSize="@dimen/text_min_size"
+            tools:text="@sample/album.json/data/sectionAlbum"
+            app:layout_constraintTop_toTopOf="@id/panel"
+            app:layout_constraintStart_toStartOf="@id/panel"/>
+
+        <TextView
+            android:id="@+id/albumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@sample/album.json/data/albumName"
+            android:textSize="@dimen/text_mid_size"
+            app:layout_constraintTop_toBottomOf="@+id/sectionAlbum"
+            app:layout_constraintStart_toStartOf="@id/panel"/>
+
+        <TextView
+            android:id="@+id/sectionArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artist"
+            android:textSize="@dimen/text_min_size"
+            tools:text="@sample/album.json/data/sectionBand"
+            app:layout_constraintTop_toTopOf="@id/panel"
+            app:layout_constraintEnd_toEndOf="@id/panel"/>
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@sample/track.json/data/albumName"
+            android:textSize="@dimen/text_mid_size"
+            app:layout_constraintTop_toBottomOf="@+id/sectionArtist"
+            app:layout_constraintEnd_toEndOf="@id/panel"/>
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            tools:text="@sample/track.json/data/trackName"
+            app:layout_constraintTop_toTopOf="@+id/trackControl"
+            app:layout_constraintBottom_toBottomOf="@+id/trackControl"
+            android:textSize="@dimen/text_max_size"
+            app:layout_constraintLeft_toRightOf="@+id/trackControl"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/trackControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding"
+            android:layout_margin="@dimen/common_margin"
+            app:iconSize="@dimen/icon_button_mid_size"
+            android:contentDescription="@string/description_track_control"
+            app:icon="@drawable/ic_track_control"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:checkable="true"
+            style="@style/Widget.AppTheme.IconButton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/track" />
+
+</LinearLayout>
